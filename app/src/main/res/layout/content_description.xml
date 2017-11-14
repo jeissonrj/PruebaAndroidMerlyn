@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="app"
+            type="com.example.jeisson.pruebaandroidmerlyn.modelo.App"/>
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        bind:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.jeisson.pruebaandroidmerlyn.activities.DescripcionActivity"
+        tools:showIn="@layout/activity_descripcion">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <ImageView
+                    android:id="@+id/icono"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:id="@+id/nombreApp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/text_margin"/>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</layout>
